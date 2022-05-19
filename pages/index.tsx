@@ -2,12 +2,16 @@
 import { NextPage } from "next"
 import React from "react";
 import Header from "../components/Header";
+import Image from "next/image";
 
 
 const Home: React.FC = () => {
   return (
-    <div className=''>
+    <div className='bg-first-view '>
       <Header />
+      <div className="h-screen">
+
+      </div>
 
     </div>
   );

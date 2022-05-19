@@ -22,8 +22,8 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <div className='w-10/12 m-auto'>
-          <h1 className=' text-6xl  mt-12 font-bold'>Service.</h1>
+        <div className='w-9/12 m-auto'>
+          <h1 className=' lg:text-5xl  mt-20 font-bold'>Service.</h1>
           <span className='text-1xl font-bold'>サービス</span>
         </div>
 
