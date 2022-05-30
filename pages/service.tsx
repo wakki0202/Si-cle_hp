@@ -7,9 +7,6 @@ import { Fragment } from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
 
 
 const Home: NextPage = () => {
@@ -71,7 +68,6 @@ const Home: NextPage = () => {
 
           </div>
         </div>
-        // contact
 
 
 
