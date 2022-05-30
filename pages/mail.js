@@ -3,6 +3,7 @@ import { useState } from "react";
 import Router from 'next/router';
 import Link from 'next/link';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [title, setTitle] = useState("");
@@ -51,10 +52,10 @@ export default function Home() {
         <p className='text-center mt-8 mb-8 text-xs lg:text-sm'>下記のフォームをご記入の上、 お問い合わせください。</p>
       </div>
     <div className={styles.container}>
-      
+
         <form className={styles.main}>
           <formGroup className={styles.inputGroup}>
-           
+
             <div className='w-9/12 lg:w-7/12 m-auto'>
               <label className='block font-bold pb-3 ' htmlFor="">お問い合わせの種類*</label>
               <select type="text"
@@ -110,7 +111,7 @@ export default function Home() {
           </div>
       </form>
       </div>
+      <Footer />
       </div>
   );
 }
-

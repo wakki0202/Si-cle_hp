@@ -2,6 +2,7 @@
 import { NextPage } from "next"
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Image from "next/image";
 
 
@@ -12,7 +13,7 @@ const Home: React.FC = () => {
       <div className="h-screen">
 
       </div>
-
+      <Footer />
     </div>
   );
 }

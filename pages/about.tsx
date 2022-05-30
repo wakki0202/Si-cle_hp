@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -44,7 +45,7 @@ const Home: NextPage = () => {
 
                 <tr className='text-lg'>
                   <th className='border-b py-4'>役員</th>
-                  <td className='text-center border-b border-red'>亀田けい</td>
+                  <td className='text-center border-b border-red'>亀田奎</td>
                 </tr>
 
                 <tr className='text-lg'>
@@ -80,6 +81,7 @@ const Home: NextPage = () => {
           <p className='pt-5'>〒577-0806 大阪府東大阪市上小阪3-13-9</p>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
