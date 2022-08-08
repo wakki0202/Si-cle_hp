@@ -16,26 +16,37 @@ import {
 
 const solutions = [
   {
-    name: 'Top',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '/',
+    name: "Top",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/",
     icon: HomeIcon,
   },
   {
-    name: 'About us',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '/about',
+    name: "About us",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "/about",
     icon: OfficeBuildingIcon,
   },
-  { name: 'Service', description: "Your customers' data will be safe and secure.", href: '/service', icon: DesktopComputerIcon },
   {
-    name: 'Contact',
+    name: "Service",
+    description: "Your customers' data will be safe and secure.",
+    href: "/service",
+    icon: DesktopComputerIcon,
+  },
+  {
+    name: "Contact",
     description: "Connect with third-party tools that you're already using.",
-    href: '/contact',
+    href: "/contact",
     icon: MailIcon,
   },
- 
-]
+  {
+    name: "Test",
+    description: "test.",
+    href: "/test",
+    icon: MailIcon,
+  },
+];
 
 
 
@@ -67,7 +78,7 @@ const Header: React.FC = () => {
             <Link href={"/"}><a className="text-base font-medium  hover:text-gray-900">
               Top
             </a></Link>
-            <Link href={"/about"}><a className="text-base font-medium 
+            <Link href={"/about"}><a className="text-base font-medium
             hover:text-gray-900">
               About
             </a></Link>

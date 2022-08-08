@@ -66,6 +66,8 @@ export default function Home() {
                 <option disabled>選択してください</option>
                 <option value="新規お取引に関して">新規お取引に関して</option>
                 <option value="採用に関して">採用に関して</option>
+                <option value="">サービスに関して</option>
+                <option value="">その他</option>
               </select>
             </div>
           </formGroup>
