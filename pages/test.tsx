@@ -23,13 +23,14 @@ export default function Home({ information }: Props) {
             className="rounded overflow-hidden shadow-lg"
             key={information.id}
           >
-            <div className="px-6 py-4">{information.title}</div>
+            <div className="px-6 py-4 bg-slate-100">{information.title}</div>
             <div className="px-6 pt-4 pb-2">
               <img
-                className="w-full"
+                className="w-full h-[350px]"
                 src={information.eye_catch.url}
                 alt="Sunset in the mountains"
               />
+              <div className=" pb-4">{information.body}</div>
               {information.tag && (
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                   #{information.tag}
