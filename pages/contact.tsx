@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
