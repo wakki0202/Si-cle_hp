@@ -4,6 +4,7 @@ import Router from 'next/router';
 import Link from 'next/link';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function Home() {
   const [title, setTitle] = useState("");
@@ -45,24 +46,35 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Si-cle</title>
+        <meta name="hogehogenyannyan" content="created by かめちゃん" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
-      <div className='w-9/12 m-auto'>
-        <h1 className=' text-3xl lg:text-5xl  mt-20 font-bold'>Contact.</h1>
-        <span className='text-1xl'>お問い合わせ</span>
-        <p className='text-center mt-8 mb-8 text-xs lg:text-sm'>下記のフォームをご記入の上、 お問い合わせください。</p>
+      <div className="w-9/12 m-auto">
+        <h1 className=" text-3xl lg:text-5xl  mt-20 font-bold">Contact.</h1>
+        <span className="text-1xl">お問い合わせ</span>
+        <p className="text-center mt-8 mb-8 text-xs lg:text-sm">
+          下記のフォームをご記入の上、 お問い合わせください。
+        </p>
       </div>
-    <div className={styles.container}>
-
+      <div className={styles.container}>
         <form className={styles.main}>
           <formGroup className={styles.inputGroup}>
-
-            <div className='w-9/12 lg:w-7/12 m-auto'>
-              <label className='block font-bold pb-3 ' htmlFor="">お問い合わせの種類*</label>
-              <select type="text"
+            <div className="w-9/12 lg:w-7/12 m-auto">
+              <label className="block font-bold pb-3 " htmlFor="">
+                お問い合わせの種類*
+              </label>
+              <select
+                type="text"
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}
-                name="title" className='w-full bg-gray-100 p-1 h-14 lg:h-16' id="" >
+                name="title"
+                className="w-full bg-gray-100 p-1 h-14 lg:h-16"
+                id=""
+              >
                 <option disabled>選択してください</option>
                 <option value="新規お取引に関して">新規お取引に関して</option>
                 <option value="採用に関して">採用に関して</option>
@@ -72,48 +84,75 @@ export default function Home() {
             </div>
           </formGroup>
           <formGroup className={styles.inputGroup}>
-            <div className='w-9/12 lg:w-7/12 m-auto pt-8'>
-              <label className='block font-bold pb-3' htmlFor="">お名前*</label>
-              <input type="text"
+            <div className="w-9/12 lg:w-7/12 m-auto pt-8">
+              <label className="block font-bold pb-3" htmlFor="">
+                お名前*
+              </label>
+              <input
+                type="text"
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
-                name="name" className='w-full bg-gray-100 p-2 h-14 lg:h-16' id="" placeholder='サイクル太郎' />
+                name="name"
+                className="w-full bg-gray-100 p-2 h-14 lg:h-16"
+                id=""
+                placeholder="サイクル太郎"
+              />
             </div>
-        </formGroup>
+          </formGroup>
 
-        <formGroup className={styles.inputGroup}>
-            <div className='w-9/12 lg:w-7/12 m-auto pt-8'>
-              <label className='block font-bold pb-3' htmlFor="">メールアドレス*</label>
-              <input type="email"
+          <formGroup className={styles.inputGroup}>
+            <div className="w-9/12 lg:w-7/12 m-auto pt-8">
+              <label className="block font-bold pb-3" htmlFor="">
+                メールアドレス*
+              </label>
+              <input
+                type="email"
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                name="email" className='w-full bg-gray-100 p-2 h-14 lg:h-16' id="" placeholder='xxx@example.com'/>
+                name="email"
+                className="w-full bg-gray-100 p-2 h-14 lg:h-16"
+                id=""
+                placeholder="xxx@example.com"
+              />
             </div>
-        </formGroup>
+          </formGroup>
 
-        <formGroup className={styles.inputGroup}>
-            <div className='w-9/12 lg:w-7/12 m-auto pt-8'>
-              <label className='block font-bold pb-3' htmlFor="">お問い合わせ内容*</label>
-              <textarea type="text"
+          <formGroup className={styles.inputGroup}>
+            <div className="w-9/12 lg:w-7/12 m-auto pt-8">
+              <label className="block font-bold pb-3" htmlFor="">
+                お問い合わせ内容*
+              </label>
+              <textarea
+                type="text"
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
-                name="message" className='w-full bg-gray-100 h-48 p-2'  id="" placeholder='お問い合わせ内容を入力してください'>
-              </textarea>
+                name="message"
+                className="w-full bg-gray-100 h-48 p-2"
+                id=""
+                placeholder="お問い合わせ内容を入力してください"
+              ></textarea>
             </div>
-        </formGroup>
+          </formGroup>
 
-          <div className='text-center mt-10 mb-20 border border-gray-300  w-9/12 lg:w-7/12 m-auto py-5 hover:bg-gray-700 hover:text-white duration-200'>
-            <Link href='/contact'><a type="submit"
-              onClick={(e) => {
-                handleSubmit(e);
-              }} className='font-bold'>送信する</a></Link>
+          <div className="text-center mt-10 mb-20 border border-gray-300  w-9/12 lg:w-7/12 m-auto py-5 hover:bg-gray-700 hover:text-white duration-200">
+            <Link href="/contact">
+              <a
+                type="submit"
+                onClick={(e) => {
+                  handleSubmit(e);
+                }}
+                className="font-bold"
+              >
+                送信する
+              </a>
+            </Link>
           </div>
-      </form>
+        </form>
       </div>
       <Footer />
-      </div>
+    </div>
   );
 }
