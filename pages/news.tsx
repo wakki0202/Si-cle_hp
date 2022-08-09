@@ -40,6 +40,7 @@ export default function Home({ information }: Props) {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   );
 }
